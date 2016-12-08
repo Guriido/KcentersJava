@@ -15,14 +15,14 @@ public class AlgoDescente extends Algo {
 	
 	@Override
 	Solution resoudre() {
-		int tentatives = 10000;
+		int tentatives = 1000;
 		//Initialiser solution
 		Solution s = (new AlgoRandom(this.instance)).resoudre();
 		meilleurScore = s.getScore();
 		
 		for(int i = 0; i < tentatives;i++){
 			s = this.testMutation(s);
-			System.out.println("score max : "+this.meilleurScore);
+			//System.out.println("score max : "+this.meilleurScore);
 		}
 		
 		return s;

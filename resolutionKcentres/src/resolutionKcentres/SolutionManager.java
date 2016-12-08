@@ -65,14 +65,14 @@ public class SolutionManager {
 		}
 	}
 	
-	public void exportCSV(int nbMoyenne, int nbNs) throws IOException{
+	public void exportCSV(int nbMoyenne, int nbNs,String generator,String algo) throws IOException{
 
 		String date = "_" + LocalDateTime.now();
 		date = date.substring(0, 20);
 		date = date.replace(':', '-');
 		System.out.println(date);
 		CsvOutput output = new CsvOutput(new ArrayList<Integer>(), new ArrayList<Double>(), new ArrayList<Double>());
-		Path p = Paths.get("TestVar"+this.solutions.size()+"solutions"+date+ ".csv");
+		Path p = Paths.get("Testk"+this.solutions.get(0).centres.size()+"Var"+this.solutions.size()+"solutions"+generator+algo+date+ ".csv");
 		output.toCSV(p);
 
 		for(int i = 0; i < nbNs; i++){

@@ -5,7 +5,7 @@ public class Test {
 	public static void main(String[] args) {
 		
 		int n = 50;
-		int k = 8;
+		int k = 4;
 		
 		AbstractGenerator generateur = new UniformeGene();
 		
