@@ -8,7 +8,7 @@ public class TestSolutionManager {
 		
 		SolutionManager s = new SolutionManager();
 		AbstractGenerator generator = new UniformeGene();
-		Algo algo = new AlgoDescente(null);
+		Algo algo = new AlgoExact(null);
 		/*int nbInstances = 10;
 		int n = 100;
 		int k = 20;
@@ -17,11 +17,11 @@ public class TestSolutionManager {
 		s.exportCSV();
 		*/
 		
-		int nbMoyenne = 100;
-		int nDepart = 10;
-		int nArrivee = 200;
+		int nbMoyenne = 1;
+		int nDepart = 50;
+		int nArrivee = 100;
 		int nPas = 10;
-		int k = 5;
+		int k = 7;
 		int nbNs = (nArrivee - nDepart)/nPas;
 		
 		s.generateInstancesVar(generator, nbMoyenne, nDepart, nArrivee, nPas, k);

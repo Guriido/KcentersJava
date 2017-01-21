@@ -5,13 +5,13 @@ public class Test {
 	public static void main(String[] args) {
 		
 		int n = 50;
-		int k = 4;
+		int k = 7;
 		
 		AbstractGenerator generateur = new UniformeGene();
 		
 		Instance instance = generateur.generer(n, k);
 		System.out.println("generation");
-		Algo algo = new AlgoDescente(instance);
+		Algo algo = new AlgoGlouton(instance);
 		Algo algo2 = new AlgoExact(instance);
 		System.out.println("Initialisation");
 		Solution s = algo.resoudre();
@@ -19,8 +19,8 @@ public class Test {
 		System.out.println(algo.getClass().toString() +" : "+ s.getScore());
 		System.out.println(algo2.getClass().toString() +" : "+ s2.getScore());
 		//Util.printArrayList(s.centres);
-		//s.afficheSolution();
-		//s2.afficheSolution();
+		s.afficheSolution();
+		s2.afficheSolution();
 		System.out.println("done.");
 		
 		
